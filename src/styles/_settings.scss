@@ -1,0 +1,33 @@
+// COLORS
+$yellow: #fce498;
+$yellowBack: #fbfddb;
+$purple: #53479b;
+$purpleLight: #bdb3f8;
+$red: #ff5a3e;
+
+
+$bg-color-main: $yellowBack;
+$font-color-main: $yellow;
+$border-color: $red;
+
+
+// FONTS
+$font-main: 'PT Serif', serif;
+$font-detail: 'Roboto', sans-serif;
+
+$font-banner: 80px;
+$font-xxl: 60px;
+$font-xl: 33px;
+$font-l: 28px;
+$font-m: 20px;
+$font-size: 16px;
+
+
+// SIZING
+$default-space: 20px;
+$max-width: 1240px;
+$section-height: 760px;
+$section-height-short: 560px;
+
+// MEDIA QUERIES
+$small-viewport: "only screen and (max-width : 640px)";

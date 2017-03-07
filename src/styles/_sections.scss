@@ -1,0 +1,102 @@
+section {
+  max-width: $max-width;
+  min-height: $section-height;
+  padding: $default-space 178px;
+  margin: $default-space auto;
+
+  @media #{$small-viewport} {
+    padding: $default-space;
+  }
+
+  .header {
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 105px;
+    h2 {
+      font-size: $font-l;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  }
+
+  .content {
+    display: flex;
+    @media #{$small-viewport} {
+      flex-direction: column;
+    }
+
+    .col {
+      max-width: 50%;
+
+      @media #{$small-viewport} {
+        max-width: 100%;
+      }
+
+      h1 {
+        margin-bottom: 40px;
+      }
+
+      .float-img {
+        margin-left: 110px;
+         @media #{$small-viewport} {
+          margin-left: 0;
+          max-width: 100%;
+        }
+      }
+    }
+
+    p {
+      max-width: 340px;
+      @media #{$small-viewport} {
+        max-width: 100%;
+      }
+
+      &.large {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &.intro .content {
+    align-items: center;
+    h1 {
+      padding-right: 25px;
+      margin-left: 35px;
+      margin-right: 25px;
+      border-right: 2px solid $border-color;
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
+
+  &.short {
+    min-height: $section-height-short;
+  }
+
+  &.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.collapse {
+    padding-bottom: 0;
+    margin-top: 0;
+  }
+
+  &.intro {
+    position: relative;
+    background: url('./images/intro_bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: $font-color-main;
+
+    .action {
+      position: absolute;
+      bottom: $default-space;
+    }
+  }
+
+  &.yellow {
+    background-color: $font-color-main;
+  }
+}

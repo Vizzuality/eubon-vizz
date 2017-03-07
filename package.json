@@ -1,0 +1,31 @@
+{
+  "name": "eubon-vizz",
+  "version": "0.1.0",
+  "description": "An Entirely New Data-Driven Approach to Butterfly Migrations",
+  "repository": "git@github.com:Vizzuality/eubon-vizz.git",
+  "homepage": "https://vizzuality.github.io/eubon-vizz",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "eslint-config-vizzuality": "^1.0.3",
+    "gh-pages": "^0.12.0",
+    "node-sass": "^4.5.0",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "0.9.3"
+  },
+  "scripts": {
+    "start": "npm-run-all -p start:css start:js",
+    "start:js": "react-scripts start",
+    "start:css": "npm run build:css && node-sass src/ -o src/ --watch --recursive",
+    "build": "npm run build:css && react-scripts build",
+    "build:css": "node-sass src/ -o src/",
+    "deploy": "npm run build&&gh-pages -d build"
+  },
+  "main": "index.js",
+  "eslintConfig": {
+    "extends": "vizzuality"
+  }
+}

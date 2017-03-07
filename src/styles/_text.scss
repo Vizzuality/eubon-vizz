@@ -1,0 +1,28 @@
+h1 {
+  font-size: $font-banner;
+  font-weight: 400;
+  &.small {
+    font-size: $font-xl;
+  }
+  @media #{$small-viewport} {
+    font-size: $font-xl;
+    &.small {
+      font-size: $font-l;
+    }
+  }
+}
+
+h2 {
+  font-size: $font-m;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+p {
+  font-family: $font-detail;
+  line-height: 1.75;
+  &.large {
+    font-size: $font-l;
+    line-height: 1.43;
+  }
+}
