@@ -1,13 +1,23 @@
 // COLORS
 $yellow: #fce498;
 $yellowBack: #fbfddb;
+$orange: #ffa33e;
 $purple: #53479b;
+$purple-gradient-light: #473999;
+$purple-gradient-dark: #2f2279;
 $purpleLight: #bdb3f8;
 $red: #ff5a3e;
 
 
 $bg-color-main: $yellowBack;
-$font-color-main: $yellow;
+$bg-color-yellow: $yellow;
+$bg-color-purple: $purple;
+$bg-color-orange: $orange;
+$bg-color-purple-light: $purpleLight;
+
+$font-color-main: $purple;
+$font-color-light: $purpleLight;
+$font-color-secondary: $yellow;
 $border-color: $red;
 
 
@@ -15,19 +25,20 @@ $border-color: $red;
 $font-main: 'PT Serif', serif;
 $font-detail: 'Roboto', sans-serif;
 
-$font-banner: 80px;
-$font-xxl: 60px;
-$font-xl: 33px;
-$font-l: 28px;
-$font-m: 20px;
+$font-size-banner: 80px;
+$font-size-xxl: 60px;
+$font-size-xl: 33px;
+$font-size-l: 28px;
+$font-size-m: 20px;
 $font-size: 16px;
+$font-size-s: 14px;
 
 
 // SIZING
 $default-space: 20px;
 $max-width: 1240px;
-$section-height: 760px;
-$section-height-short: 560px;
+$section-height: 750px;
+$section-height-short: 530px;
 
 // MEDIA QUERIES
 $small-viewport: "only screen and (max-width : 640px)";

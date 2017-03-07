@@ -1,69 +1,77 @@
 section {
-  max-width: $max-width;
   min-height: $section-height;
-  padding: $default-space 178px;
-  margin: $default-space auto;
 
-  @media #{$small-viewport} {
-    padding: $default-space;
-  }
-
-  .header {
+  > .header {
     text-align: center;
     margin-top: 4px;
     margin-bottom: 105px;
     h2 {
-      font-size: $font-l;
+      font-size: $font-size-xl;
       font-weight: 700;
       letter-spacing: 1px;
     }
   }
 
-  .content {
+  > .content {
     display: flex;
     @media #{$small-viewport} {
       flex-direction: column;
     }
 
     .col {
-      max-width: 50%;
+      flex-basis: 50%;
+      flex-shrink: 0;
 
       @media #{$small-viewport} {
-        max-width: 100%;
+        flex-basis: 100%;
       }
 
       h1 {
-        margin-bottom: 40px;
+        margin-bottom: $default-space;
       }
 
       .float-img {
-        margin-left: 110px;
+        margin-left: 10px;
          @media #{$small-viewport} {
           margin-left: 0;
           max-width: 100%;
         }
       }
-    }
 
-    p {
-      max-width: 340px;
-      @media #{$small-viewport} {
-        max-width: 100%;
-      }
-
-      &.large {
-        margin-bottom: 40px;
+      &.-padding-left {
+        padding-left: 100px;
       }
     }
   }
 
+  h3 {
+    font-size: $font-size-l;
+    margin-bottom: $default-space;
+  }
+
+  p {
+    max-width: 340px;
+
+    @media #{$small-viewport} {
+      max-width: 100%;
+    }
+
+    &.wide {
+      max-width: 700px;
+    }
+  }
+
+  .slider-container {
+    margin-top: 48px;
+  }
+
   &.intro .content {
     align-items: center;
+    margin-top: 65px;
+
     h1 {
-      padding-right: 25px;
-      margin-left: 35px;
-      margin-right: 25px;
-      border-right: 2px solid $border-color;
+      font-size: $font-size-xxl;
+      margin-left: 100px;
       font-weight: 700;
       line-height: 1;
     }
@@ -79,24 +87,127 @@ section {
     justify-content: center;
   }
 
+  &.center-v {
+    display: flex;
+    align-items: center;
+  }
+
   &.collapse {
-    padding-bottom: 0;
+    margin-bottom: 0;
     margin-top: 0;
+	  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 -2px 4px 0 rgba(0, 0, 0, 0.2);
   }
 
   &.intro {
     position: relative;
     background: url('./images/intro_bg.jpg') no-repeat center center;
     background-size: cover;
-    color: $font-color-main;
+
+    h1, h2 {
+      color: $font-color-secondary;
+    }
 
     .action {
       position: absolute;
-      bottom: $default-space;
+      bottom: 38px;
     }
   }
 
   &.yellow {
-    background-color: $font-color-main;
+    background-color: $bg-color-yellow;
+    > .header {
+      h2 {
+        color: $border-color;
+      }
+    }
+  }
+
+  &.orange {
+    background-color: $bg-color-orange;
+    > .header {
+      h2 {
+        color: $border-color;
+      }
+    }
+    h1, h2, h3, p {
+      color: #fff;
+    }
+  }
+
+  &.purple {
+    background-color: $bg-color-purple;
+    h1, h2, h3, p {
+      color: #fff;
+      &.light {
+         color: $font-color-light;
+      }
+    }
+    &.-light {
+      background-color: $bg-color-purple;
+    }
+    &.-gradient-light {
+      background-image: linear-gradient(to bottom, $purple, $purple-gradient-light);
+    }
+    &.-gradient-dark {
+      background-image: linear-gradient(to bottom, $purple-gradient-light, $purple-gradient-dark)
+    }
+  }
+
+  &.white {
+    background-color: transparent;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 140px;
+      right: 18%;
+      bottom: 140px;
+      left: 18%;
+      background-color: #fff;
+      z-index: -1;
+    }
+  }
+
+  &.bg-butterfly {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 30px;
+      left: 22%;
+      background: url(/static/media/butterfly.a42b65b2.png) no-repeat center;
+      background-size: cover;
+      display: block;
+      width: 310px;
+      height: 310px;
+      z-index: 0;
+    }
+  }
+
+  &.bg-butterfly-top {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      background-image: url(/static/media/butterfly.a42b65b2.png);
+      background-position: center;
+      background-size: 160px;
+      transform: scaleX(-1);
+      display: block;
+      width: 160px;
+      height: 160px;
+      z-index: 0;
+    }
+  }
+  &.texture {
+    background-image: url('./images/butterfly_texture.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 750px;
   }
 }

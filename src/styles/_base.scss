@@ -48,3 +48,47 @@ ol,
 li {
   list-style: none;
 }
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  padding: 0;
+  border-radius: 0px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.row {
+  width: calc(100% - $default-spac*2);
+  margin: $default-space;
+  // max-width: $max-width;
+  // margin: $default-space auto;
+  padding: $default-space 90px;
+  @media #{$small-viewport} {
+    padding: $default-space;
+  }
+  > .column {
+    padding: $default-space 90px;
+    &.clear-right {
+      padding-right: 0;
+    }
+
+    @media #{$small-viewport} {
+      padding: $default-space;
+    }
+  }
+}
+
+.separator {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: $default-space*2 0 $default-space;
+  background-color: $border-color;
+  &.-ver {
+    width: 2px;
+    height: 50px;
+    margin: 0 20px;
+  }
+}
