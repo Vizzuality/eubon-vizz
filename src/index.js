@@ -1,4 +1,5 @@
 import Siema from 'siema';
+import Sticky from './lib/sticky';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Chart from './chart';
@@ -18,6 +19,10 @@ const slider = new Siema({
 
 document.querySelector('.js-slider-prev').addEventListener('click', () => slider.prev());
 document.querySelector('.js-slider-next').addEventListener('click', () => slider.next());
+
+// Init Sticky
+const sticky = document.querySelector('.sticky');
+if (sticky) new Sticky(sticky);
 
 ReactDOM.render(
   <Chart />,

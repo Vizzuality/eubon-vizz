@@ -4,7 +4,8 @@ section {
   > .header {
     text-align: center;
     margin-top: 4px;
-    margin-bottom: 105px;
+    min-height: 105px;
+
     h2 {
       font-size: $font-size-xl;
       font-weight: 700;

@@ -53,7 +53,7 @@ button {
   cursor: pointer; }
 
 .row {
-  width: calc(100% - $default-spac*2);
+  width: calc(100% - 40px);
   margin: 20px;
   padding: 20px 90px; }
 
@@ -82,6 +82,16 @@ button {
   width: 2px;
   height: 50px;
   margin: 0 20px; }
+
+.sticky {
+  padding-top: 20px; }
+
+.sticky.is-sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3; }
 
 h1 {
   color: #53479b;
@@ -161,7 +171,7 @@ section {
 section > .header {
   text-align: center;
   margin-top: 4px;
-  margin-bottom: 105px; }
+  min-height: 105px; }
 
 section > .header h2 {
   font-size: 33px;
@@ -225,7 +235,7 @@ section.intro .content h1 {
   line-height: 1; }
 
 section.short {
-  min-height: 530px; }
+  min-height: 580px; }
 
 section.center {
   display: flex;
