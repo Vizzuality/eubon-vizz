@@ -6,7 +6,6 @@
   "homepage": "https://vizzuality.github.io/eubon-vizz",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "siema": "^1.2.0"
