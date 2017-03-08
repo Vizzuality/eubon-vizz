@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Graph from './graph';
 import CustomSelect from '../lib/select';
 import Switch from '../lib/switch';
-import countries from './data/countries.json';
-import species from './data/species.json';
+import butterfliesData from './data/butterflies.json';
+import countriesData from './data/countries.json';
+import speciesData from './data/species.json';
 
 function parseCountries(countries) {
   return Object.keys(countries).map((key) => {
@@ -15,38 +16,82 @@ function parseSpecies(species) {
   return Object.keys(species).map((key, index) => ({
     value: key,
     label: species[key].commonName,
-    active: index < 4,
+    active: index < 3,
     color: species[key].color
   }));
+}
+
+function parseData(data, selectedCountry, selectedSpecies) {
+  const dataParsed = selectedSpecies.map((species) => {
+    const dataParsed = Object.keys(data).map((year, index) => {
+      let totalSum = 0;
+      selectedSpecies.forEach((item) => {
+        totalSum += data[year][selectedCountry][item];
+      });
+      return {
+        x: year.replace('_', ' - '),
+        y: (data[year][selectedCountry][species] * 100) / totalSum || 0
+      }
+    });
+    return {
+      data: dataParsed,
+      color: speciesData[species].color };
+  });
+  return dataParsed;
+}
+
+
+function getActiveSpecies(species) {
+  return species.reduce(function(result, item) {
+    if (item.active) result.push(item.value)
+    return result;
+  }, []);
 }
 
 class Chart extends Component {
   constructor() {
     super();
-    this.countries = parseCountries(countries);
+    this.countries = parseCountries(countriesData);
+    const countrySelected = this.countries[0];
+    const species = parseSpecies(speciesData);
+    this.size = {
+      width: 400,
+      height: 250
+    }
     this.state = {
-      countrySelected: this.countries[0],
-      species: parseSpecies(species),
-      data: [[{x: 1, y: 10}, {x: 2, y: 5}, {x: 3, y: 15} ],[{x: 1, y: 10}, {x: 2, y: 5}, {x: 3, y: 15} ]]
+      species,
+      countrySelected,
+      data: parseData(butterfliesData, countrySelected.value, getActiveSpecies(species)),
+      dataExample: [[{x: 1, y: 10}, {x: 2, y: 5}, {x: 3, y: 15} ],[{x: 1, y: 10}, {x: 2, y: 5}, {x: 3, y: 15} ]]
     }
   }
 
   updateCountry(selected) {
-    this.setState({
-      countrySelected: selected
-    });
+    if (this.state.countrySelected.value !== selected.value) {
+      this.setState((state) => ({
+        countrySelected: selected,
+        data: parseData(butterfliesData, selected.value, getActiveSpecies(state.species)),
+      }));
+    }
   }
 
   onSwitchChange(selected) {
-    this.setState((state) => ({
-      species: state.species.map((item) => (
+    this.setState((state) => {
+      const species = state.species.map((item) => (
         item.value === selected.value
           ? { ...item, active: !selected.active }
           : item
-      ))
-    }));
+      ));
+      const data = parseData(butterfliesData, state.countrySelected.value, getActiveSpecies(species));
+      return { data, species }
+    });
   }
 
+  getPlaceholder() {
+    return (
+      <div className="placeholder"><p class="light"> Please select one species </p></div>
+    )
+  }
   getSpecies(species) {
     return (
       <ul className="species-list">
@@ -86,7 +131,10 @@ class Chart extends Component {
         </div>
         <div className="chart-row">
           <div className="col1">
-           <Graph data={this.state.data} />
+            {this.state.data.length > 0
+              ? <Graph size={this.size} data={this.state.data} />
+              : <div className="placeholder"><p className="light"> Please, select one species </p></div>
+            }
           </div>
           <div className="col2">
             {this.getSpecies(this.state.species)}

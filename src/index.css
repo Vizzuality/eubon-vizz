@@ -485,9 +485,16 @@ section.bg-butterfly-texture > .texture {
 .c-chart .title {
   max-width: 340px; }
 
+.c-chart .rv-xy-plot__axis__title text {
+  fill: #bdb3f8;
+  font-size: 14px; }
+
 .c-chart .rv-xy-plot__axis__tick__text {
   fill: #bdb3f8;
   font-size: 14px; }
+
+.c-chart .rv-xy-plot__grid-lines__line {
+  stroke: #bdb3f8; }
 
 .c-select {
   position: relative; }

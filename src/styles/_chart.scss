@@ -20,9 +20,18 @@
   }
 
   .rv-xy-plot {
+    &__axis__title {
+      text {
+        fill: $font-color-light;
+        font-size: $font-size-s;
+      }
+    }
     &__axis__tick__text {
       fill: $font-color-light;
       font-size: $font-size-s;
+    }
+    &__grid-lines__line {
+      stroke: $bg-color-purple-light;
     }
   }
 }

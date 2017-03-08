@@ -1,25 +1,35 @@
 import React from 'react';
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalBarSeries} from 'react-vis';
+import { XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalBarSeries } from 'react-vis';
 
 function Graph(props) {
   return (
     <XYPlot
-      width={400}
-      height={250}
-      stackBy={'y'}>
+      width={props.size.width}
+      height={props.size.height}
+      stackBy={'y'}
+      xType="ordinal"
+      margin={{ top: 40 }}
+    >
       <HorizontalGridLines />
-      {props.data.map((data, index) => (
+      {props.data.map((item, index) => (
         <VerticalBarSeries
           key={index}
-          data={data}/>
+          animation
+          color={item.color}
+          data={item.data}
+        />
       ))}
-      <XAxis />
+      <XAxis orientation="top" />
       <YAxis />
     </XYPlot>
   );
 }
 
 Graph.propTypes = {
+  size: React.PropTypes.shape({
+    width: React.PropTypes.number.isRequired,
+    height: React.PropTypes.number.isRequired
+  }).isRequired,
   data: React.PropTypes.array.isRequired
 };
 
