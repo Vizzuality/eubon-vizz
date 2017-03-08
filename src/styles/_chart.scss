@@ -18,4 +18,11 @@
   .title {
     max-width: 340px;
   }
+
+  .rv-xy-plot {
+    &__axis__tick__text {
+      fill: $font-color-light;
+      font-size: $font-size-s;
+    }
+  }
 }

@@ -7,7 +7,9 @@
   "license": "MIT",
   "dependencies": {
     "react": "^15.4.2",
+    "react-addons-shallow-compare": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-vis": "^1.0.0",
     "siema": "^1.2.0"
   },
   "devDependencies": {

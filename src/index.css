@@ -275,6 +275,9 @@ section.short {
   section.short {
     min-height: 0; } }
 
+section.h-auto {
+  min-height: 0; }
+
 section.center {
   display: flex;
   align-items: center;
@@ -481,6 +484,10 @@ section.bg-butterfly-texture > .texture {
 
 .c-chart .title {
   max-width: 340px; }
+
+.c-chart .rv-xy-plot__axis__tick__text {
+  fill: #bdb3f8;
+  font-size: 14px; }
 
 .c-select {
   position: relative; }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Graph from './graph';
 import CustomSelect from '../lib/select';
 import Switch from '../lib/switch';
 import countries from './data/countries.json';
@@ -25,7 +26,8 @@ class Chart extends Component {
     this.countries = parseCountries(countries);
     this.state = {
       countrySelected: this.countries[0],
-      species: parseSpecies(species)
+      species: parseSpecies(species),
+      data: [[{x: 1, y: 10}, {x: 2, y: 5}, {x: 3, y: 15} ],[{x: 1, y: 10}, {x: 2, y: 5}, {x: 3, y: 15} ]]
     }
   }
 
@@ -84,7 +86,7 @@ class Chart extends Component {
         </div>
         <div className="chart-row">
           <div className="col1">
-            <p>Chart</p>
+           <Graph data={this.state.data} />
           </div>
           <div className="col2">
             {this.getSpecies(this.state.species)}

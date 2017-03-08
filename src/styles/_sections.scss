@@ -98,6 +98,10 @@ section {
     }
   }
 
+  &.h-auto {
+    min-height: 0;
+  }
+
   &.center {
     display: flex;
     align-items: center;
