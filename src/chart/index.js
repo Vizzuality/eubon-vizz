@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CustomSelect from '../lib/select';
+import Switch from '../lib/switch';
 import countries from './data/countries.json';
+import species from './data/species.json';
 
 function parseCountries(countries) {
   return Object.keys(countries).map((key) => {
@@ -8,12 +10,22 @@ function parseCountries(countries) {
   })
 }
 
+function parseSpecies(species) {
+  return Object.keys(species).map((key, index) => ({
+    value: key,
+    label: species[key].commonName,
+    active: index < 4,
+    color: species[key].color
+  }));
+}
+
 class Chart extends Component {
   constructor() {
     super();
     this.countries = parseCountries(countries);
     this.state = {
-      countrySelected: this.countries[0]
+      countrySelected: this.countries[0],
+      species: parseSpecies(species)
     }
   }
 
@@ -31,6 +43,23 @@ class Chart extends Component {
           : item
       ))
     }));
+  }
+
+  getSpecies(species) {
+    return (
+      <ul className="species-list">
+        {species.map((item, index) => (
+          <li key={index}>
+            <Switch
+              checkedColor={item.color}
+              onChange={() => this.onSwitchChange(item)}
+              checked={item.active || false}
+              label={item.label}
+            />
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
@@ -58,7 +87,7 @@ class Chart extends Component {
             <p>Chart</p>
           </div>
           <div className="col2">
-            Species
+            {this.getSpecies(this.state.species)}
           </div>
         </div>
       </div>

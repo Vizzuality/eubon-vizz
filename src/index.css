@@ -575,3 +575,43 @@ section.bg-butterfly-texture > .texture {
 
 .c-custom-select .custom-select-options li.-selected {
   color: #fff; }
+
+.c-switch {
+  padding: 1px 0;
+  cursor: pointer; }
+
+.c-switch > .toggle {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  flex-shrink: 0;
+  line-height: 1;
+  border-radius: 22px;
+  background-color: #665ba7;
+  transition: background-color 0.2s ease-out; }
+
+.c-switch > .toggle:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 0;
+  top: 1px;
+  border-radius: 4px;
+  background-color: #261c4f;
+  cursor: pointer;
+  transform: translateX(2px);
+  transition: transform 0.2s ease-out; }
+
+.c-switch > .toggle.-checked {
+  background-color: #fce498; }
+
+.c-switch > .toggle.-checked:after {
+  transform: translateX(11px); }
+
+.c-switch > .label {
+  margin-left: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  line-height: 1.62; }

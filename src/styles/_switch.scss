@@ -1,0 +1,45 @@
+.c-switch {
+  padding: 1px 0;
+  cursor: pointer;
+
+  > .toggle {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    flex-shrink: 0;
+    line-height: 1;
+    border-radius: 22px;
+    background-color: #665ba7;
+    transition: background-color 0.2s ease-out;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 1px;
+      border-radius: 4px;
+      background-color: #261c4f;
+      cursor: pointer;
+      transform: translateX(2px);
+      transition: transform 0.2s ease-out;
+    }
+
+    &.-checked {
+      background-color: $yellow;
+
+      &:after{
+        transform: translateX(11px);
+      }
+    }
+  }
+
+  > .label {
+    margin-left: $default-space;
+    font-family: $font-detail;
+    color: $font-color-white;
+    line-height: 1.62;
+  }
+}
