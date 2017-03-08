@@ -7,9 +7,14 @@ import countriesData from './data/countries.json';
 import speciesData from './data/species.json';
 
 function parseCountries(countries) {
+  function sort(a,b) {
+    if (a.label < b.label) return -1;
+    if (a.label > b.label) return 1;
+    return 0;
+  }
   return Object.keys(countries).map((key) => {
     return { value: key, label: countries[key] }
-  })
+  }).sort(sort)
 }
 
 function parseSpecies(species) {
@@ -61,8 +66,7 @@ class Chart extends Component {
     this.state = {
       species,
       countrySelected,
-      data: parseData(butterfliesData, countrySelected.value, getActiveSpecies(species)),
-      dataExample: [[{x: 1, y: 10}, {x: 2, y: 5}, {x: 3, y: 15} ],[{x: 1, y: 10}, {x: 2, y: 5}, {x: 3, y: 15} ]]
+      data: parseData(butterfliesData, countrySelected.value, getActiveSpecies(species))
     }
   }
 

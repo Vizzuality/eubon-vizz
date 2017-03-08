@@ -249,6 +249,7 @@ section {
 
   &.bg-butterfly-texture {
     position: relative;
+    overflow: hidden;
 
     > .content {
       z-index: 1;
@@ -261,6 +262,11 @@ section {
       width: 750px;
       height: 520px;
       z-index: 0;
+      @media #{$small-viewport} {
+        width: 460px;
+      height: 280px;
+      bottom: 0px
+      }
     }
   }
 }

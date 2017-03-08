@@ -404,7 +404,8 @@ section.bg-butterfly-center:after {
   z-index: 0; }
 
 section.bg-butterfly-texture {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 section.bg-butterfly-texture > .content {
   z-index: 1; }
@@ -416,6 +417,12 @@ section.bg-butterfly-texture > .texture {
   width: 750px;
   height: 520px;
   z-index: 0; }
+
+@media only screen and (max-width: 860px) {
+  section.bg-butterfly-texture > .texture {
+    width: 460px;
+    height: 280px;
+    bottom: 0px; } }
 
 .slider-container {
   display: flex;
@@ -473,14 +480,30 @@ section.bg-butterfly-texture > .texture {
 .c-chart > .chart-row {
   display: flex; }
 
+@media only screen and (max-width: 860px) {
+  .c-chart > .chart-row {
+    flex-direction: column; } }
+
 .c-chart > .chart-row:not(:last-child) {
   margin-bottom: 60px; }
+
+@media only screen and (max-width: 860px) {
+  .c-chart > .chart-row:not(:last-child) {
+    margin-bottom: 20px; } }
 
 .c-chart > .chart-row > .col1 {
   flex-basis: 60%; }
 
+@media only screen and (max-width: 860px) {
+  .c-chart > .chart-row > .col1 {
+    flex-basis: 100%; } }
+
 .c-chart > .chart-row > .col2 {
   flex-basis: 40%; }
+
+@media only screen and (max-width: 860px) {
+  .c-chart > .chart-row > .col2 {
+    flex-basis: 100%; } }
 
 .c-chart .title {
   max-width: 340px; }

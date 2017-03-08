@@ -2,16 +2,31 @@
 
   > .chart-row {
     display: flex;
+    @media #{$small-viewport} {
+      flex-direction: column;
+    }
 
     &:not(:last-child) {
       margin-bottom: $default-space * 3;
+
+      @media #{$small-viewport} {
+        margin-bottom: $default-space;
+      }
     }
 
     > .col1 {
-      flex-basis: 60%
+      flex-basis: 60%;
+
+      @media #{$small-viewport} {
+        flex-basis: 100%;
+      }
     }
     > .col2 {
-      flex-basis: 40%
+      flex-basis: 40%;
+
+      @media #{$small-viewport} {
+        flex-basis: 100%;
+      }
     }
   }
 
