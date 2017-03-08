@@ -1,6 +1,7 @@
 .icon-mouse {
   width: 24px;
   height: 40px;
+  display:inline-block;
 
   .border {
     fill: $bg-color-yellow;
@@ -32,6 +33,7 @@
 .icon-arrow {
   width: 16px;
   height: 14px;
+  display:inline-block;
 
   path {
     fill: $border-color;
@@ -41,6 +43,7 @@
 .icon-triangle {
   width: 20px;
   height: 20px;
+  display:inline-block;
 
   path {
     fill: $border-color;
@@ -54,6 +57,7 @@
 .icon-texture {
   width: 100%;
   height: 100%;
+  display:inline-block;
 
   path.color1 {
     fill: #ffc04f;

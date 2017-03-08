@@ -49,6 +49,7 @@
     align-items: center;
     justify-content: center;
     border: 1px solid rgba($border-color, 0.15);
+    display:inline-block;
     &:not(:last-child) {
       margin-right: 5px;
     }
