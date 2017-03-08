@@ -1,5 +1,8 @@
 section {
   min-height: $section-height;
+  @media #{$small-viewport} {
+    min-height: $section-height-short;
+  }
 
   > .header {
     text-align: center;
@@ -88,6 +91,11 @@ section {
 
   &.short {
     min-height: $section-height-short;
+    padding-top: $default-space*2;
+    padding-bottom: $default-space*2;
+    @media #{$small-viewport} {
+      min-height: 0;
+    }
   }
 
   &.center {

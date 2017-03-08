@@ -1,0 +1,21 @@
+.c-chart {
+
+  > .chart-row {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: $default-space * 3;
+    }
+
+    > .col1 {
+      flex-basis: 60%
+    }
+    > .col2 {
+      flex-basis: 40%
+    }
+  }
+
+  .title {
+    max-width: 340px;
+  }
+}
