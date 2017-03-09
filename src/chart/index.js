@@ -21,6 +21,7 @@ function parseSpecies(species) {
   return Object.keys(species).map((key, index) => ({
     value: key,
     label: species[key].commonName,
+    title: species[key].fullName,
     active: index < 3,
     color: species[key].color
   }));
@@ -110,6 +111,7 @@ class Chart extends Component {
         {species.map((item, index) => (
           <li key={index}>
             <Switch
+              title={item.title}
               checkedColor={item.color}
               onChange={() => this.onSwitchChange(item)}
               checked={item.active || false}
