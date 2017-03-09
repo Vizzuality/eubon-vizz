@@ -76,6 +76,9 @@ button {
     padding: $default-space 90px;
     &.clear-right {
       padding-right: 0;
+      @media #{$small-viewport} {
+        padding-right: $default-space;
+      }
     }
 
     @media #{$small-viewport} {
