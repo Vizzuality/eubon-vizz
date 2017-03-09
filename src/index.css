@@ -217,6 +217,10 @@ section > .content .col {
   section > .content .col {
     flex-basis: 100%; } }
 
+@media only screen and (max-width: 860px) {
+  section > .content .col:not(:last-child) {
+    margin-bottom: 20px; } }
+
 section > .content .col h1 {
   margin-bottom: 20px; }
 
@@ -428,6 +432,11 @@ section.bg-butterfly-texture > .texture {
   display: flex;
   align-items: flex-end; }
 
+@media only screen and (max-width: 860px) {
+  .slider-container {
+    flex-direction: column;
+    align-items: center; } }
+
 .slider {
   padding-left: 4px;
   display: block;
@@ -461,6 +470,10 @@ section.bg-butterfly-texture > .texture {
 
 .slider-nav {
   display: flex; }
+
+@media only screen and (max-width: 860px) {
+  .slider-nav {
+    margin-top: 20px; } }
 
 .slider-nav .slider-btn {
   width: 70px;
@@ -506,7 +519,14 @@ section.bg-butterfly-texture > .texture {
     flex-basis: 100%; } }
 
 .c-chart .title {
-  max-width: 340px; }
+  max-width: 340px;
+  margin-bottom: 20px; }
+
+.c-chart .graph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 450px; }
 
 .c-chart .rv-xy-plot__axis__title text {
   fill: #bdb3f8;

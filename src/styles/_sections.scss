@@ -29,6 +29,11 @@ section {
       @media #{$small-viewport} {
         flex-basis: 100%;
       }
+      &:not(:last-child) {
+        @media #{$small-viewport} {
+          margin-bottom: $default-space;
+        }
+      }
 
       h1 {
         margin-bottom: $default-space;

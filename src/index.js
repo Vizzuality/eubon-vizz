@@ -5,12 +5,15 @@ import ReactDOM from 'react-dom';
 import Chart from './chart';
 import './index.css';
 
+const mediaquery = window.matchMedia("(max-width: 860px)");
+const slidesNum = mediaquery.matches ? 2 : 3;
+
 // Init slider
 const slider = new Siema({
   selector: '#aplications-slider',
   duration: 200,
   easing: 'ease-out',
-  perPage: 3,
+  perPage: slidesNum,
   startIndex: 0,
   draggable: true,
   threshold: 20,

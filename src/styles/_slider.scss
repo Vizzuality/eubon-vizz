@@ -1,6 +1,11 @@
 .slider-container {
   display: flex;
   align-items: flex-end;
+
+   @media #{$small-viewport} {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .slider {
   padding-left: 4px;
@@ -41,6 +46,9 @@
 
 .slider-nav {
   display: flex;
+  @media #{$small-viewport} {
+    margin-top: $default-space;
+  }
 
   .slider-btn {
     width: 70px;
