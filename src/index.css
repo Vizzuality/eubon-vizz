@@ -528,6 +528,9 @@ section.bg-butterfly-texture > .texture {
   justify-content: center;
   max-width: 450px; }
 
+.c-chart .rv-xy-plot {
+  position: relative; }
+
 .c-chart .rv-xy-plot__axis__title text {
   fill: #bdb3f8;
   font-size: 14px; }
@@ -538,6 +541,12 @@ section.bg-butterfly-texture > .texture {
 
 .c-chart .rv-xy-plot__grid-lines__line {
   stroke: #bdb3f8; }
+
+.c-chart .tooltip {
+  background-color: #53479b;
+  border: 1px solid #bdb3f8;
+  padding: 5px;
+  color: #bdb3f8; }
 
 .c-select {
   position: relative; }

@@ -33,9 +33,11 @@ function parseData(data, selectedCountry, selectedSpecies) {
       selectedSpecies.forEach((item) => {
         totalSum += data[year][selectedCountry][item];
       });
+      const value = data[year][selectedCountry][species];
       return {
+        count: value,
         x: year.replace('_', ' - '),
-        y: (data[year][selectedCountry][species] * 100) / totalSum || 0
+        y: (value * 100) / totalSum || 0
       }
     });
     return {
