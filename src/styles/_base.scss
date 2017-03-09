@@ -62,12 +62,16 @@ button {
 .row {
   width: calc(100% - #{$default-space * 2});
   margin: $default-space;
-  // max-width: $max-width;
-  // margin: $default-space auto;
-  padding: $default-space 90px;
+  padding: $default-space $default-space * 4;
+
+  @media #{$medium-viewport} {
+    padding: $default-space $default-space * 2;
+  }
+
   @media #{$small-viewport} {
     padding: $default-space;
   }
+
   > .column {
     padding: $default-space 90px;
     &.clear-right {

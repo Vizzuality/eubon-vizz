@@ -5,6 +5,9 @@ h1 {
   &.small {
     font-size: $font-size-xl;
   }
+  @media #{$medium-viewport} {
+    font-size: $font-size-xxl;
+  }
   @media #{$small-viewport} {
     font-size: $font-size-xl;
     &.small {
