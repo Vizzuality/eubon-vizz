@@ -59,15 +59,23 @@ class Chart extends Component {
     this.countries = parseCountries(countriesData);
     const countrySelected = this.countries[0];
     const species = parseSpecies(speciesData);
-    this.size = {
-      width: 400,
-      height: 250
-    }
     this.state = {
+      size: null,
       species,
       countrySelected,
       data: parseData(butterfliesData, countrySelected.value, getActiveSpecies(species))
     }
+  }
+
+  componentDidMount() {
+    this.updateSize({
+      height: 250,
+      width: this.graph.getBoundingClientRect().width
+    });
+  }
+
+  updateSize(size) {
+    this.setState({ size });
   }
 
   updateCountry(selected) {
@@ -135,10 +143,15 @@ class Chart extends Component {
         </div>
         <div className="chart-row">
           <div className="col1">
-            {this.state.data.length > 0
-              ? <Graph size={this.size} data={this.state.data} />
-              : <div className="placeholder"><p className="light"> Please, select one species </p></div>
-            }
+            <div
+              className="col1 graph"
+              ref={(graph) => this.graph = graph }
+              style={{ minHeight: this.state.size && this.state.size.height ? this.state.size.height : 0 }}>
+              {this.state.size && this.state.data.length > 0
+                ? <Graph size={this.state.size} data={this.state.data} />
+                : <p className="light"> Please, select one species </p>
+              }
+            </div>
           </div>
           <div className="col2">
             {this.getSpecies(this.state.species)}

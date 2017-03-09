@@ -32,6 +32,14 @@
 
   .title {
     max-width: 340px;
+    margin-bottom: $default-space;
+  }
+
+  .graph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 450px;
   }
 
   .rv-xy-plot {
