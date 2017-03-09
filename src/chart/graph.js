@@ -8,7 +8,7 @@ function Graph(props) {
       height={props.size.height}
       stackBy={'y'}
       xType="ordinal"
-      margin={{ top: 40 }}
+      margin={{ top: 40, left: 50 }}
     >
       <HorizontalGridLines />
       {props.data.map((item, index) => (
@@ -20,7 +20,7 @@ function Graph(props) {
         />
       ))}
       <XAxis orientation="top" />
-      <YAxis />
+      <YAxis tickFormat={v => `${v} %`}/>
     </XYPlot>
   );
 }
