@@ -72,6 +72,10 @@ button {
   padding-right: 0; }
 
 @media only screen and (max-width: 640px) {
+  .row > .column.clear-right {
+    padding-right: 20px; } }
+
+@media only screen and (max-width: 640px) {
   .row > .column {
     padding: 20px; } }
 
@@ -192,6 +196,21 @@ p.small {
 
 .icon-texture path.color2 {
   fill: #ffba41; }
+
+.icon-media path {
+  fill: #ff5a3e; }
+
+.icon-media.-facebook {
+  width: 7px;
+  height: 14px; }
+
+.icon-media.-twitter {
+  width: 15px;
+  height: 12px; }
+
+.icon-media.-mail {
+  width: 14px;
+  height: 11px; }
 
 section {
   min-height: 750px; }
@@ -680,3 +699,27 @@ section.bg-butterfly-texture > .texture {
   font-family: "Roboto", sans-serif;
   color: #fff;
   line-height: 1.62; }
+
+.toolbar {
+  position: fixed;
+  bottom: 160px;
+  left: 50px;
+  z-index: 10; }
+
+.toolbar .logo {
+  width: 30px; }
+
+.toolbar .logo > img {
+  width: 100%; }
+
+.toolbar .social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0; }
+
+.toolbar .social-media > li {
+  margin: 20px 0; }
+
+.toolbar .social-media > li > a {
+  text-decoration: none; }

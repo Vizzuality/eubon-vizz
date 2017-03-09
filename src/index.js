@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import Chart from './chart';
 import './index.css';
 
-const mediaquery = window.matchMedia("(max-width: 860px)");
+const mediaquery = window.matchMedia("(max-width: 640px)");
 const slidesNum = mediaquery.matches ? 2 : 3;
 
 // Init slider
