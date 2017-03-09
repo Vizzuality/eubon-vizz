@@ -1,6 +1,8 @@
 // Override React selectize styles
 .c-select {
   position: relative;
+  display: block;
+  width: 100%;
 
   .title {
     color: $font-color-light;

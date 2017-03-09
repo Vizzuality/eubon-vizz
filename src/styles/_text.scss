@@ -30,6 +30,10 @@ p {
     font-size: $font-size-l;
     line-height: 1.43;
   }
+  &.medium {
+    font-size: $font-size-m;
+    line-height: 1.43;
+  }
   &.small {
     font-size: $font-size-s;
     line-height: 1.43;

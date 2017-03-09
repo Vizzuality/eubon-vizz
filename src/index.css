@@ -33,6 +33,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 a {
@@ -139,6 +140,10 @@ p.large {
   font-size: 28px;
   line-height: 1.43; }
 
+p.medium {
+  font-size: 20px;
+  line-height: 1.43; }
+
 p.small {
   font-size: 14px;
   line-height: 1.43; }
@@ -230,15 +235,20 @@ section > .header h2 {
   letter-spacing: 1px; }
 
 section > .content {
-  display: flex; }
+  display: flex;
+  z-index: 1; }
 
 @media only screen and (max-width: 980px) {
   section > .content {
     flex-direction: column; } }
 
+section > .content.center-v {
+  align-items: center; }
+
 section > .content .col {
   flex-basis: 50%;
-  flex-shrink: 0; }
+  flex-shrink: 0;
+  z-index: 1; }
 
 @media only screen and (max-width: 980px) {
   section > .content .col {
@@ -305,6 +315,9 @@ section.short {
 @media only screen and (max-width: 980px) {
   section.short {
     min-height: 0; } }
+
+section.padding-top {
+  padding-top: 80px; }
 
 section.h-auto {
   min-height: 0; }
@@ -438,9 +451,6 @@ section.bg-butterfly-texture {
   position: relative;
   overflow: hidden; }
 
-section.bg-butterfly-texture > .content {
-  z-index: 1; }
-
 section.bg-butterfly-texture > .texture {
   position: absolute;
   bottom: -8px;
@@ -525,18 +535,20 @@ section.bg-butterfly-texture > .texture {
     flex-direction: column; } }
 
 .c-chart > .chart-row:not(:last-child) {
-  margin-bottom: 60px; }
+  margin-bottom: 20px; }
 
 @media only screen and (max-width: 980px) {
   .c-chart > .chart-row:not(:last-child) {
     margin-bottom: 20px; } }
 
 .c-chart > .chart-row > .col1 {
-  flex-basis: 60%; }
+  flex-basis: calc(60% - 4%);
+  margin-right: 4%; }
 
 @media only screen and (max-width: 980px) {
   .c-chart > .chart-row > .col1 {
-    flex-basis: 100%; } }
+    flex-basis: 100%;
+    margin-right: 0; } }
 
 .c-chart > .chart-row > .col2 {
   flex-basis: 40%; }
@@ -545,15 +557,22 @@ section.bg-butterfly-texture > .texture {
   .c-chart > .chart-row > .col2 {
     flex-basis: 100%; } }
 
+.c-chart .center-v {
+  display: flex;
+  align-items: center; }
+
 .c-chart .title {
-  max-width: 340px;
   margin-bottom: 20px; }
+
+.c-chart .species-list > li {
+  margin: 6px 0; }
 
 .c-chart .graph {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 450px; }
+  max-width: 600px;
+  margin: 0 auto; }
 
 .c-chart .rv-xy-plot__axis__title text {
   fill: #bdb3f8;
@@ -567,7 +586,9 @@ section.bg-butterfly-texture > .texture {
   stroke: #bdb3f8; }
 
 .c-select {
-  position: relative; }
+  position: relative;
+  display: block;
+  width: 100%; }
 
 .c-select .title {
   color: #bdb3f8;
@@ -662,7 +683,9 @@ section.bg-butterfly-texture > .texture {
 
 .c-switch {
   padding: 1px 0;
-  cursor: pointer; }
+  cursor: pointer;
+  display: flex;
+  align-items: center; }
 
 .c-switch > .toggle {
   position: relative;
@@ -698,7 +721,7 @@ section.bg-butterfly-texture > .texture {
   margin-left: 20px;
   font-family: "Roboto", sans-serif;
   color: #fff;
-  line-height: 1.62; }
+  line-height: 1.2; }
 
 .toolbar {
   position: fixed;

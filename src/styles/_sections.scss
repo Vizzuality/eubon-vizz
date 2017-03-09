@@ -18,13 +18,20 @@ section {
 
   > .content {
     display: flex;
+    z-index: 1;
+
     @media #{$medium-viewport} {
       flex-direction: column;
+    }
+
+    &.center-v {
+      align-items: center;
     }
 
     .col {
       flex-basis: 50%;
       flex-shrink: 0;
+      z-index: 1;
 
       @media #{$medium-viewport} {
         flex-basis: 100%;
@@ -101,6 +108,10 @@ section {
     @media #{$medium-viewport} {
       min-height: 0;
     }
+  }
+
+  &.padding-top {
+    padding-top: $default-space * 4;
   }
 
   &.h-auto {
@@ -255,10 +266,6 @@ section {
   &.bg-butterfly-texture {
     position: relative;
     overflow: hidden;
-
-    > .content {
-      z-index: 1;
-    }
 
     > .texture {
       position: absolute;

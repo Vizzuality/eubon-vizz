@@ -20,9 +20,9 @@ function parseCountries(countries) {
 function parseSpecies(species) {
   return Object.keys(species).map((key, index) => ({
     value: key,
-    label: species[key].commonName,
-    title: species[key].fullName,
-    active: index < 3,
+    title: species[key].commonName,
+    label: species[key].fullName,
+    active: true,
     color: species[key].color
   }));
 }
@@ -128,9 +128,10 @@ class Chart extends Component {
       <div className="c-chart">
         <div className="chart-row">
           <div className="col1">
-            <h2 className="title">Relative Abundance of Butterfly Species over time</h2>
+            <h2 className="title">Relative abundance of butterfly species over time</h2>
+            <p className="light wide">You can interpret this chart as the probability of seeing one species of butterfly versus another during each period of time.</p>
           </div>
-          <div className="col2">
+          <div className="col2 center-v">
             <div className="c-select">
               <div className="select-header">
                 <span className="title">Select a country</span>
