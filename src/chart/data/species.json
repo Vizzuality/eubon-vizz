@@ -2,41 +2,49 @@
   "S1": {
     "fullName": "Vanessa atalanta",
     "commonName": "Red Admiral",
-    "color": "#f8e396"
+    "color": "#f8e396",
+    "image": "admiral"
   },
   "S2": {
     "fullName": "Pieris napi",
     "commonName": "Green-veined White",
-    "color": "#ff5a3e"
+    "color": "#ff5a3e",
+    "image": "pieris-napi"
   },
   "S3": {
     "fullName": "Pieris brassicae",
     "commonName": "Large Cabbage White",
-    "color": "#ffa33e"
+    "color": "#ffa33e",
+    "image": "large-cabbage-white"
   },
   "S4": {
     "fullName": "Nymphalis xanthomelas",
     "commonName": "Yellow-legged Tortoiseshell",
-    "color": "#e62a2a"
+    "color": "#e62a2a",
+    "image": "yellow-legged-tortoiseshell"
   },
   "S5": {
     "fullName": "Vanessa cardui ",
     "commonName": "Painted Lady",
-    "color": "#f681ad"
+    "color": "#f681ad",
+    "image": "painted-lady"
   },
   "S6": {
     "fullName": "Araschnia levana",
     "commonName": "Map butterfly",
-    "color": "#f55e95"
+    "color": "#f55e95",
+    "image": "map-butterfly"
   },
   "S7": {
     "fullName": "Apatura ilia",
     "commonName": "Lesser Purple Emperor",
-    "color": "#a9165f"
+    "color": "#a9165f",
+    "image": "lesser-purple-emperor"
   },
   "S8": {
     "fullName": "Apatura iris",
     "commonName": "Purple Emperor",
-    "color": "#75063d"
+    "color": "#75063d",
+    "image": "purple-emperor"
   }
 }

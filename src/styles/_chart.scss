@@ -56,6 +56,8 @@
   }
 
   .rv-xy-plot {
+    position: relative;
+
     &__axis__title {
       text {
         fill: $font-color-light;
@@ -68,6 +70,60 @@
     }
     &__grid-lines__line {
       stroke: $bg-color-purple-light;
+    }
+  }
+
+  .tooltip {
+    background-color: $bg-color-purple;
+    border: 2px solid;
+    padding: 5px;
+    color: $font-color-light;
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 0px 10px rgba($bg-color-main, 0.1);
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: calc(50% + 1px);
+      width: 0;
+      height: 20px;
+      border-left: 2px solid;
+    }
+
+    &.-admiral {
+      background: url('images/butterflies/admiral.jpg') no-repeat center;
+      background-size: cover;
+    }
+    &.-pieris-napi {
+      background: url('images/butterflies/pieris-napi.jpg') no-repeat center;
+      background-size: cover;
+    }
+    &.-large-cabbage-white {
+      background: url('images/butterflies/large-cabbage-white.jpg') no-repeat center;
+      background-size: cover;
+    }
+    &.-yellow-legged-tortoiseshell {
+      background: url('images/butterflies/yellow-legged-tortoiseshell.jpg') no-repeat center;
+      background-size: cover;
+    }
+    &.-painted-lady {
+      background: url('images/butterflies/painted-lady.jpg') no-repeat center;
+      background-size: cover;
+    }
+    &.-map-butterfly {
+      background: url('images/butterflies/map-butterfly.jpg') no-repeat center;
+      background-size: cover;
+    }
+    &.-lesser-purple-emperor {
+      background: url('images/butterflies/lesser-purple-emperor.jpg') no-repeat center;
+      background-size: cover;
+    }
+    &.-purple-emperor {
+      background: url('images/butterflies/purple-emperor.jpg') no-repeat center;
+      background-size: cover;
     }
   }
 }

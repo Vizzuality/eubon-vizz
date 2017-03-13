@@ -28,22 +28,26 @@ function parseSpecies(species) {
 }
 
 function parseData(data, selectedCountry, selectedSpecies) {
-  const dataParsed = selectedSpecies.map((species) => {
+  return selectedSpecies.map((species) => {
     const dataParsed = Object.keys(data).map((year, index) => {
       let totalSum = 0;
       selectedSpecies.forEach((item) => {
         totalSum += data[year][selectedCountry][item];
       });
+      const value = data[year][selectedCountry][species];
       return {
+        count: value,
         x: year.replace('_', ' - '),
-        y: (data[year][selectedCountry][species] * 100) / totalSum || 0
+        y: (value * 100) / totalSum || 0,
+        image: speciesData[species].image,
+        color: speciesData[species].color
       }
     });
     return {
       data: dataParsed,
-      color: speciesData[species].color };
+      color: speciesData[species].color
+    };
   });
-  return dataParsed;
 }
 
 
