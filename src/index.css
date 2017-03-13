@@ -590,9 +590,54 @@ section.bg-butterfly-texture > .texture {
 
 .c-chart .tooltip {
   background-color: #53479b;
-  border: 1px solid #bdb3f8;
+  border: 2px solid;
   padding: 5px;
-  color: #bdb3f8; }
+  color: #bdb3f8;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  box-shadow: 0px 0px 0px 10px rgba(251, 253, 219, 0.1); }
+
+.c-chart .tooltip:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: calc(50% + 1px);
+  width: 0;
+  height: 20px;
+  border-left: 2px solid; }
+
+.c-chart .tooltip.-admiral {
+  background: url("images/butterflies/admiral.jpg") no-repeat center;
+  background-size: cover; }
+
+.c-chart .tooltip.-pieris-napi {
+  background: url("images/butterflies/pieris-napi.jpg") no-repeat center;
+  background-size: cover; }
+
+.c-chart .tooltip.-large-cabbage-white {
+  background: url("images/butterflies/large-cabbage-white.jpg") no-repeat center;
+  background-size: cover; }
+
+.c-chart .tooltip.-yellow-legged-tortoiseshell {
+  background: url("images/butterflies/yellow-legged-tortoiseshell.jpg") no-repeat center;
+  background-size: cover; }
+
+.c-chart .tooltip.-painted-lady {
+  background: url("images/butterflies/painted-lady.jpg") no-repeat center;
+  background-size: cover; }
+
+.c-chart .tooltip.-map-butterfly {
+  background: url("images/butterflies/map-butterfly.jpg") no-repeat center;
+  background-size: cover; }
+
+.c-chart .tooltip.-lesser-purple-emperor {
+  background: url("images/butterflies/lesser-purple-emperor.jpg") no-repeat center;
+  background-size: cover; }
+
+.c-chart .tooltip.-purple-emperor {
+  background: url("images/butterflies/purple-emperor.jpg") no-repeat center;
+  background-size: cover; }
 
 .c-select {
   position: relative;
