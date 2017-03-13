@@ -117,3 +117,16 @@ button {
     z-index: 3;
   }
 }
+
+.btn {
+  display: inline-block;
+  font-size: $font-size-s;
+  color: $bg-color-main;
+  padding: 4px 50px 6px;
+  border: 2px solid $bg-color-main;
+  transition: color .25s ease-in-out;
+
+  &:hover {
+    color: $font-color-secondary;
+  }
+}

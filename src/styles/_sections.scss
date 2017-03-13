@@ -79,6 +79,10 @@ section {
     &.wide {
       max-width: 700px;
     }
+
+    & + .btn {
+      margin-top: $default-space * 2;
+    }
   }
 
   .slider-container {
@@ -91,7 +95,7 @@ section {
 
     h1 {
       font-size: $font-size-xxl;
-      margin-left: 100px;
+      margin-left: 85px;
       font-weight: 700;
       line-height: 1;
 
@@ -145,9 +149,44 @@ section {
     }
 
     .action {
-      position: absolute;
-      bottom: 38px;
-      left: calc(50% - 24px);
+      &.-right {
+        position: absolute;
+        right: -20px;
+        top: calc(50% - 100px);
+
+        .aquamaps-link {
+          position: relative;
+          display: inline-block;
+          width: 242px;
+	        height: 279px;
+
+          > span {
+            position: absolute;
+            top: 121px;
+            left: 62px;
+            font-size: 18px;
+            color: $font-color-main-inv;
+            font-family: $font-detail;
+            letter-spacing: 0.5px;
+            transition: color .25s ease-in-out;
+          }
+
+          > img {
+            width: auto;
+            height: 100%;
+          }
+          &:hover {
+            span {
+              color: $font-color-secondary;
+            }
+          }
+        }
+      }
+      &.-bottom {
+        position: absolute;
+        bottom: 38px;
+        left: calc(50% - 12px);
+      }
     }
   }
 
@@ -175,7 +214,7 @@ section {
   &.purple {
     background-color: $bg-color-purple;
     h1, h2, h3, p {
-      color: #fff;
+      color: $font-color-main-inv;
       &.light {
          color: $font-color-light;
       }
