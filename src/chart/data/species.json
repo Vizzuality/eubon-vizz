@@ -1,41 +1,41 @@
 {
   "S1": {
-    "fullName": "Vanessa atalanta Linnaeus, 1758",
+    "fullName": "Vanessa atalanta",
     "commonName": "Red Admiral",
     "color": "#f8e396"
   },
   "S2": {
-    "fullName": "Pieris napi (Linnaeus, 1758)",
+    "fullName": "Pieris napi",
     "commonName": "Green-veined White",
     "color": "#ff5a3e"
   },
   "S3": {
-    "fullName": "Pieris brassicae (Linnaeus, 1758)",
+    "fullName": "Pieris brassicae",
     "commonName": "Large Cabbage White",
     "color": "#ffa33e"
   },
   "S4": {
-    "fullName": "Nymphalis xanthomelas Denis & Schiffermüller, 1775",
+    "fullName": "Nymphalis xanthomelas",
     "commonName": "Yellow-legged Tortoiseshell",
     "color": "#e62a2a"
   },
   "S5": {
-    "fullName": "Vanessa cardui (Linnaeus, 1758) Linnaeus, 1758",
+    "fullName": "Vanessa cardui ",
     "commonName": "Painted Lady",
     "color": "#f681ad"
   },
   "S6": {
-    "fullName": "Araschnia levana Linnaeus, 1758",
-    "commonName": "Map",
+    "fullName": "Araschnia levana",
+    "commonName": "Map butterfly",
     "color": "#f55e95"
   },
   "S7": {
-    "fullName": "Apatura ilia Denis & Schiffermüller, 1775",
+    "fullName": "Apatura ilia",
     "commonName": "Lesser Purple Emperor",
     "color": "#a9165f"
   },
   "S8": {
-    "fullName": "Apatura iris Linnaeus, 1758",
+    "fullName": "Apatura iris",
     "commonName": "Purple Emperor",
     "color": "#75063d"
   }

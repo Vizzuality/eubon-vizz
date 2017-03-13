@@ -5,6 +5,9 @@ h1 {
   &.small {
     font-size: $font-size-xl;
   }
+  @media #{$medium-viewport} {
+    font-size: $font-size-xxl;
+  }
   @media #{$small-viewport} {
     font-size: $font-size-xl;
     &.small {
@@ -25,6 +28,10 @@ p {
   line-height: 1.75;
   &.large {
     font-size: $font-size-l;
+    line-height: 1.43;
+  }
+  &.medium {
+    font-size: $font-size-m;
     line-height: 1.43;
   }
   &.small {

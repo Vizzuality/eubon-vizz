@@ -2,44 +2,57 @@
 
   > .chart-row {
     display: flex;
-    @media #{$small-viewport} {
+    @media #{$medium-viewport} {
       flex-direction: column;
     }
 
     &:not(:last-child) {
-      margin-bottom: $default-space * 3;
+      margin-bottom: $default-space;
 
-      @media #{$small-viewport} {
+      @media #{$medium-viewport} {
         margin-bottom: $default-space;
       }
     }
 
     > .col1 {
-      flex-basis: 60%;
+      flex-basis: calc(60% - 4%);
+      margin-right: 4%;
 
-      @media #{$small-viewport} {
+      @media #{$medium-viewport} {
         flex-basis: 100%;
+        margin-right: 0;
       }
     }
     > .col2 {
       flex-basis: 40%;
 
-      @media #{$small-viewport} {
+      @media #{$medium-viewport} {
         flex-basis: 100%;
       }
     }
   }
 
+  .center-v {
+    display: flex;
+    align-items: center;
+  }
+
   .title {
-    max-width: 340px;
     margin-bottom: $default-space;
+  }
+
+  .species-list {
+    > li {
+      margin: 6px 0;
+    }
   }
 
   .graph {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 450px;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
   .rv-xy-plot {

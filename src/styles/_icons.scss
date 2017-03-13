@@ -66,3 +66,21 @@
     fill: #ffba41;
   }
 }
+
+.icon-media {
+  path {
+    fill: $border-color;
+  }
+  &.-facebook {
+    width: 7px;
+    height: 14px;
+  }
+  &.-twitter {
+    width: 15px;
+    height: 12px;
+  }
+  &.-mail {
+    width: 14px;
+    height: 11px;
+  }
+}

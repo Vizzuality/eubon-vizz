@@ -1,6 +1,8 @@
 .c-switch {
   padding: 1px 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 
   > .toggle {
     position: relative;
@@ -40,6 +42,6 @@
     margin-left: $default-space;
     font-family: $font-detail;
     color: $font-color-white;
-    line-height: 1.62;
+    line-height: 1.2;
   }
 }

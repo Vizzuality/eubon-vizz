@@ -10,7 +10,7 @@ function Switch(props) {
   }
 
   return (
-    <div className="c-switch" onClick={props.onChange}>
+    <div className="c-switch" onClick={props.onChange} title={props.title}>
       <span style={checkedColor} className={classNames.join(' ')} />
       {props.label &&
         <span className="label">{props.label}</span>
@@ -32,6 +32,10 @@ Switch.propTypes = {
   * Define the switch label
   */
   label: React.PropTypes.string,
+  /**
+  * Define the switch label
+  */
+  title: React.PropTypes.string,
   /**
   * Define the function to handle the changes
   */

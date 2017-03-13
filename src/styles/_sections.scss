@@ -1,6 +1,6 @@
 section {
   min-height: $section-height;
-  @media #{$small-viewport} {
+  @media #{$medium-viewport} {
     min-height: $section-height-short;
   }
 
@@ -18,19 +18,26 @@ section {
 
   > .content {
     display: flex;
-    @media #{$small-viewport} {
+    z-index: 1;
+
+    @media #{$medium-viewport} {
       flex-direction: column;
+    }
+
+    &.center-v {
+      align-items: center;
     }
 
     .col {
       flex-basis: 50%;
       flex-shrink: 0;
+      z-index: 1;
 
-      @media #{$small-viewport} {
+      @media #{$medium-viewport} {
         flex-basis: 100%;
       }
       &:not(:last-child) {
-        @media #{$small-viewport} {
+        @media #{$medium-viewport} {
           margin-bottom: $default-space;
         }
       }
@@ -41,7 +48,7 @@ section {
 
       .float-img {
         margin-left: 10px;
-         @media #{$small-viewport} {
+         @media #{$medium-viewport} {
           margin-left: 0;
           max-width: 100%;
         }
@@ -50,7 +57,7 @@ section {
       &.-padding-left {
         padding-left: 100px;
 
-         @media #{$small-viewport} {
+         @media #{$medium-viewport} {
           padding-left: 0;
         }
       }
@@ -65,7 +72,7 @@ section {
   p {
     max-width: 340px;
 
-    @media #{$small-viewport} {
+    @media #{$medium-viewport} {
       max-width: 100%;
     }
 
@@ -88,7 +95,7 @@ section {
       font-weight: 700;
       line-height: 1;
 
-      @media #{$small-viewport} {
+      @media #{$medium-viewport} {
         margin-left: 0;
       }
     }
@@ -98,9 +105,13 @@ section {
     min-height: $section-height-short;
     padding-top: $default-space*2;
     padding-bottom: $default-space*2;
-    @media #{$small-viewport} {
+    @media #{$medium-viewport} {
       min-height: 0;
     }
+  }
+
+  &.padding-top {
+    padding-top: $default-space * 4;
   }
 
   &.h-auto {
@@ -256,10 +267,6 @@ section {
     position: relative;
     overflow: hidden;
 
-    > .content {
-      z-index: 1;
-    }
-
     > .texture {
       position: absolute;
       bottom: -8px;
@@ -267,7 +274,7 @@ section {
       width: 750px;
       height: 520px;
       z-index: 0;
-      @media #{$small-viewport} {
+      @media #{$medium-viewport} {
         width: 460px;
       height: 280px;
       bottom: 0px
